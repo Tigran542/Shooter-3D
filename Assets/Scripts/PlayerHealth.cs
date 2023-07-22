@@ -69,4 +69,6 @@ public class PlayerHealth : MonoBehaviour
         maxHealth += (health * 0.01f) * ((100 - level) * 0.1f);
         health = maxHealth;
     }
+
+
 }
