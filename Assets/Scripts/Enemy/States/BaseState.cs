@@ -1,7 +1,7 @@
 public abstract class BaseState
 {
     //instance of enemy clas
-    //instanceof statemachine class
+    public StateMachine stateMachine;
 
     public abstract void Enter();
     public abstract void Perform();
