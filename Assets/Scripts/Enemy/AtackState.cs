@@ -25,6 +25,7 @@ public class AtackState : BaseState
             losePlayerTimer = 0;
             moveTimer += Time.deltaTime;
             shotTimer += Time.deltaTime;
+            enemy.transform.LookAt(enemy.Player.transform);
             //if shot 
             if (shotTimer > enemy.fireRate)
             {

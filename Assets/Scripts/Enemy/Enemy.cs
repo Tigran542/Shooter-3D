@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
     private NavMeshAgent agent;
     private GameObject player;
     public NavMeshAgent Agent { get => agent; }
-
+    public GameObject Player { get => player; }
     public Path path;
     [Header("Sight Values")]
     public float sightDistance = 20f;
