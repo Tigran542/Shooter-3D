@@ -6,16 +6,21 @@ public class Enemy : MonoBehaviour
 {
     private StateMachine stateMachine;
     private NavMeshAgent agent;
+    private GameObject player;
     public NavMeshAgent Agent { get => agent; }
 
-    //Just for debugging proposes.
-    [SerializeField]
-    private string currentState;
     public Path path;
-    private GameObject player;
+    [Header("Sight Values")]
     public float sightDistance = 20f;
     public float fieldOfView = 85f;
     public float eyeHeight;
+    [Header("Weapon Values")]
+    public Transform gunBarrel;
+    [Range(0.1f,10f)]
+    public float fireRate;
+    //Just for debugging proposes.
+    [SerializeField]
+    private string currentState;
     void Start()
     {
         stateMachine = GetComponent<StateMachine>();
